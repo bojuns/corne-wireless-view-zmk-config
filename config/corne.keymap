@@ -230,14 +230,14 @@
 
    default_layer {
     // -------------------------------------------------------------------------------------
-    // |  Q  =  W  |  F  |  P  |  G  |   |  J  |  L  |  U  |  Y  -  '  |
-    // |  A  |  R  |  S  |  T  |  D  |   |  H  |  N  |  E  |  I  |  O  |
-    // |  Z  [  X  |  C  |  V  |  B  |   |  K  |  M  |  ,  |  .  ]  /  |
+    // |  Q  =  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  -  '  |
+    // |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |
+    // |  Z  [  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  ]  /  |
     //  | ESC/+ | LWR(BSPC/DEL) | LSFT |  ;  |  RSE(SPC/TAB)  | RET/_ |
     bindings = <
-      &kp Q       &kp W      &kp F       &kp P      &kp G  &kp J &kp L       &kp U       &kp Y      &kp SQT     
-      &hm LSHFT A &hm LALT R &hm LCTRL S &hm LGUI T &kp D  &kp H &hm RGUI N  &hm RCTRL E &hm RALT I &hm RSHFT O 
-      &kp Z       &kp X      &kp C       &kp V      &kp B  &kp K &kp M       &kp COMMA   &kp DOT    &kp FSLH    
+      &kp Q       &kp W      &kp F       &kp P      &kp B  &kp J &kp L       &kp U       &kp Y      &kp SQT     
+      &hm LSHFT A &hm LALT R &hm LCTRL S &hm LGUI T &kp G  &kp M &hm RGUI N  &hm RCTRL E &hm RALT I &hm RSHFT O 
+      &kp Z       &kp X      &kp C       &kp D      &kp V  &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH    
       &kp ESC &lt 1 BKSP &mt LSHFT TAB &kp SEMI &lt 2 SPACE &kp RET
       >;
     };
