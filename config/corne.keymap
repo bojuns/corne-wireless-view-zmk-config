@@ -57,6 +57,34 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+        lte: lte {
+            label = "less_than_equal";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LT>
+                , <&macro_tap &kp EQUAL>
+                ;
+        };
+        rptr: rptr {
+          label = "right_pointer";
+          compatible = "zmk,behavior-macro";
+          #binding-cells = <0>;
+          bindings 
+              = <&macro_release &kp LSFT>
+              , <&macro_tap &kp MINUS>
+              , <&macro_tap &kp GT>
+              ;
+        };
+        gte: gte {
+            label = "greater_than_equal";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GT>
+                , <&macro_tap &kp EQUAL>
+                ;
+        };
     };
 };
 / {
