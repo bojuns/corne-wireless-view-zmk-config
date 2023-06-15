@@ -252,7 +252,7 @@
       &kp Q       &kp W      &kp F       &kp P      &kp B  &kp J &kp L       &kp U       &kp Y      &kp SQT     
       &hm LSHFT A &hm LALT R &hm LCTRL S &hm LGUI T &kp G  &kp M &hm RGUI N  &hm RCTRL E &hm RALT I &hm RSHFT O 
       &kp Z       &kp X      &kp C       &kp D      &kp V  &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH    
-      &kp ESC &lt 1 BKSP &mt LSHFT TAB &kp SEMI &lt 2 SPACE &kp RET
+      &kp ESC &lt 1 TAB &mt LSHFT BKSP &kp SPACE &lt 2 SEMI &kp RET
       >;
     };
 
