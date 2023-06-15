@@ -34,6 +34,15 @@
             then-layer = <3>;
         };
     };
+    behaviors {
+        gte_ptr: greater_than_equal_pointer {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GTE_RPTR";
+            #binding-cells = <0>;
+            bindings = <&gte>, <&rptr>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
 };
 / {
     macros {
