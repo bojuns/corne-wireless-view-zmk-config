@@ -115,127 +115,127 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <0 1>;
             bindings = <&kp EQUAL>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_minus {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <8 9>;
             bindings = <&kp MINUS>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_plus {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <1 2>;
             bindings = <&kp PLUS>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_under {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <7 8>;
             bindings = <&kp UNDER>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_home {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <10 20>;
             bindings = <&kp HOME>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_end {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <19 29>;
             bindings = <&kp END>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_line_left {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <0 10>;
             bindings = <&line_left>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_line_right {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <9 19>;
             bindings = <&line_right>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_lbrc {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <20 21>;
             bindings = <&kp LBRC>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_rbrc {
             timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <28 29>;
             bindings = <&kp RBRC>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_lbkt {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <22 23>;
             bindings = <&kp LBKT>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_rbkt {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <26 27>;
             bindings = <&kp RBKT>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_lpar {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <21 22>;
             bindings = <&kp LPAR>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_rpar {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <27 28>;
             bindings = <&kp RPAR>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_lte {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <23 24>;
             bindings = <&lte>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_gte {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
             bindings = <&gte_ptr>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_left {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <15 25>;
             bindings = <&kp LEFT>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_up {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <16 26>;
             bindings = <&kp UP>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_down {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <17 27>;
             bindings = <&kp DOWN>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_right {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <18 28>;
             bindings = <&kp RIGHT>;
-            layers = <0>;
+            layers = <MAC WIN>;
         };
         combo_b {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
             bindings = <&kp B>;
-            layers = <1>;
+            layers = <LOWER>;
         };
     };
 };
