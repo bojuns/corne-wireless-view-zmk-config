@@ -12,6 +12,13 @@
 
 #define COMBO_TIMEOUT 60
 #define FAST_COMBO_TIMEOUT 35
+// layers
+#define MAC   0
+#define WIN   1
+#define LOWER 2
+#define RAISE 3
+#define FUNCT 4
+#define GAME  5
 
 &mt {
   compatible = "zmk,behavior-hold-tap";
@@ -258,7 +265,7 @@
       &kp Q       &kp W      &kp F      &kp P       &kp B  &kp J &kp L       &kp U      &kp Y      &kp SQT     
       &hm LSHFT A &hm LALT R &hm LGUI S &hm LCTRL T &kp G  &kp M &hm RCTRL N &hm RGUI E &hm RALT I &hm RSHFT O 
       &kp Z       &kp X      &kp C      &kp D       &kp V  &kp K &kp H       &kp COMMA  &kp DOT    &kp FSLH    
-      &kp ESC &lt 2 TAB &mt LSHFT BKSP &kp SPACE &lt 3 SEMI &kp RET
+      &kp ESC &lt LOWER TAB &mt LSHFT BKSP &mt RSHFT SPACE &lt RAISE SEMI &kp RET
       >;
     };
     
@@ -272,7 +279,7 @@
       &kp Q       &kp W      &kp F       &kp P      &kp B  &kp J &kp L       &kp U       &kp Y      &kp SQT     
       &hm LSHFT A &hm LALT R &hm LCTRL S &hm LGUI T &kp G  &kp M &hm RGUI N  &hm RCTRL E &hm RALT I &hm RSHFT O 
       &kp Z       &kp X      &kp C       &kp D      &kp V  &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH    
-      &kp ESC &lt 2 TAB &mt LSHFT BKSP &kp SPACE &lt 3 SEMI &kp RET
+      &kp ESC &lt LOWER TAB &mt LSHFT BKSP &mt RSHFT SPACE &lt RAISE SEMI &kp RET
       >;
     };
 
@@ -286,7 +293,7 @@
       &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET &kp AMPS  &kp STAR  &kp DQT &kp SQT 
       &kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   
       &kp PIPE  &kp TILDE &kp COLON &kp GRAVE &kp BSLH   &kp X     &kp H     &kp COMMA &kp DOT  &kp FSLH 
-      &kp DEL    &trans  &kp LGUI &kp BKSP  &lt 3 SPACE &kp RET
+      &kp DEL    &trans  &kp LGUI &kp BKSP  &lt RAISE SPACE &kp RET
       >;
    };
 
@@ -311,9 +318,9 @@
     // | F9 | F10 | F11 | F12 | T |   | BT3 | USB     | WIN | EPOFF | BLE_RST |
     //            | XXX | XXX | XXX | XXX | XXX | XXX |
     bindings = <
-      &kp F1 &kp F2  &kp F3  &kp F4  &kp B &bt BT_SEL 0 &out OUT_BLE &tog 0      &ext_power EP_ON  &tog 5
-      &kp F5 &kp F6  &kp F7  &kp F8  &kp G &bt BT_SEL 1 &out OUT_TOG &bt BT_PRV  &none             &bt BT_PRV      
-      &kp F9 &kp F10 &kp F11 &kp F12 &kp T &bt BT_SEL 2 &out OUT_USB &tog 1      &ext_power EP_OFF &bt BT_CLR     
+      &kp F1 &kp F2  &kp F3  &kp F4  &kp B &bt BT_SEL 0 &out OUT_BLE &to MAC    &ext_power EP_ON  &tog GAME
+      &kp F5 &kp F6  &kp F7  &kp F8  &kp G &bt BT_SEL 1 &out OUT_TOG &bt BT_PRV &none             &bt BT_PRV      
+      &kp F9 &kp F10 &kp F11 &kp F12 &kp T &bt BT_SEL 2 &out OUT_USB &to WIN    &ext_power EP_OFF &bt BT_CLR     
       &trans   &trans    &trans  &trans  &trans   &trans
       >;
    };  
@@ -325,7 +332,7 @@
     // | M     | Z | X | C | V |   | B | 7 | 8 | 9 |  F5  |
     //             | 4 | 3 | SPC | SPC | 0 | ENT |
     bindings = <
-      &kp ESC   &kp Q &kp W &kp E &kp R &kp T &kp N1 &kp N2 &kp N3 &tog 5
+      &kp ESC   &kp Q &kp W &kp E &kp R &kp T &kp N1 &kp N2 &kp N3 &tog GAME
       &kp LSHFT &kp A &kp S &kp D &kp G &kp H &kp N4 &kp N5 &kp N6 &kp F3 
       &kp M     &kp Z &kp X &kp C &kp V &kp B &kp N7 &kp N8 &kp N9 &kp F5 
       &kp N4          &kp N3      &kp SPACE &kp SPACE  &kp N0       &kp RET
