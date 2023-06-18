@@ -29,7 +29,7 @@
 
 &lt {
   compatible = "zmk,behavior-hold-tap";
-  tapping-term-ms = <150>;
+  tapping-term-ms = <125>;
   quick_tap_ms = <200>;
   flavor = "balanced";
 };
@@ -260,12 +260,12 @@
     // |  Q  =  W  +  F  |  P  |  B  |   |  J  |  L  |  U  _  Y  -  '  |
     // |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |
     // |  Z  [  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  ]  /  |
-    //  | ESC | LWR(BSPC) | LSFT |  ;  |  RSE(SPC)  | RET |
+    //   | ESC | LWR(TAB) | LSFT(BKSP) |  SPC  |  RSE(;)  | RET |
     bindings = <
       &kp Q       &kp W      &kp F      &kp P       &kp B  &kp J &kp L       &kp U      &kp Y      &kp SQT     
       &hm LSHFT A &hm LALT R &hm LGUI S &hm LCTRL T &kp G  &kp M &hm RCTRL N &hm RGUI E &hm RALT I &hm RSHFT O 
       &kp Z       &kp X      &kp C      &kp D       &kp V  &kp K &kp H       &kp COMMA  &kp DOT    &kp FSLH    
-      &kp ESC &lt LOWER TAB &mt LSHFT BKSP &mt RSHFT SPACE &lt RAISE SEMI &kp RET
+      &kp ESC &lt LOWER TAB &mt LSHFT BKSP &kp SPACE &lt RAISE SEMI &kp RET
       >;
     };
     
@@ -274,12 +274,12 @@
     // |  Q  =  W  +  F  |  P  |  B  |   |  J  |  L  |  U  _  Y  -  '  |
     // |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |
     // |  Z  [  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  ]  /  |
-    //  | ESC | LWR(BSPC) | LSFT |  ;  |  RSE(SPC)  | RET |
+    //   | ESC | LWR(TAB) | LSFT(BKSP) |  SPC  |  RSE(;)  | RET |
     bindings = <
       &kp Q       &kp W      &kp F       &kp P      &kp B  &kp J &kp L       &kp U       &kp Y      &kp SQT     
       &hm LSHFT A &hm LALT R &hm LCTRL S &hm LGUI T &kp G  &kp M &hm RGUI N  &hm RCTRL E &hm RALT I &hm RSHFT O 
       &kp Z       &kp X      &kp C       &kp D      &kp V  &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH    
-      &kp ESC &lt LOWER TAB &mt LSHFT BKSP &mt RSHFT SPACE &lt RAISE SEMI &kp RET
+      &kp ESC &lt LOWER TAB &mt LSHFT BKSP &kp SPACE &lt RAISE SEMI &kp RET
       >;
     };
 
