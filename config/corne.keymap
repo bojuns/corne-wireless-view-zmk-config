@@ -284,12 +284,6 @@
             bindings = <&desktop_left>;
             layers = <MAC>;
         };
-        combo_left {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <15 25>;
-            bindings = <&kp LEFT>;
-            layers = <MAC WIN>;
-        };
         combo_rptr {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <16 26>;
