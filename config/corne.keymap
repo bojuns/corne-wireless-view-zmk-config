@@ -47,19 +47,50 @@
         };
     };
     behaviors {
-        gte_ptr: greater_than_equal_pointer {
+        gt_gte: greater_than_gt_equal {
             compatible = "zmk,behavior-mod-morph";
-            label = "GTE_RPTR";
+            label = "GT_GTE";
             #binding-cells = <0>;
-            bindings = <&gte>, <&rptr>;
+            bindings = <&kp GT>, <&gte>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        lt_lte: less_than_lt_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LT_LTE";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&lte>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 };
 / {
     macros {
-        line_left: line_left {
-            label = "go_line_left";
+        snap_left: snap_left {
+            label = "snap_window_left";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        snap_right: snap_right {
+            label = "snap_window_right";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_press &kp LGUI>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        desktop_left: desktop_left {
+            label = "go_desk_left";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -68,8 +99,8 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
-        line_right: line_right {
-            label = "go_line_right";
+        desktop_right: desktop_right {
+            label = "go_desk_right";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -106,6 +137,34 @@
                 , <&macro_tap &kp EQUAL>
                 ;
         };
+        neq: neq {
+            label = "not_equal";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp EXCL>
+                , <&macro_tap &kp EQUAL>
+                ;
+        };
+        peq: peq {
+            label = "plus_equals";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp PLUS>
+                , <&macro_tap &kp EQUAL>
+                ;
+        };
+        trip_quote: trip_quote {
+            label = "triple_quote";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp DQT>
+                , <&macro_tap &kp DQT>
+                , <&macro_tap &kp DQT>
+                ;
+        };
     };
 };
 / {
@@ -117,6 +176,18 @@
             bindings = <&kp EQUAL>;
             layers = <MAC WIN>;
         };
+        combo_plus_equal {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <0 1 2>;
+            bindings = <&peq>;
+            layers = <MAC WIN>;
+        };
+        combo_tqt {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <7 8 9>;
+            bindings = <&trip_quote>;
+            layers = <MAC WIN>;
+        }; 
         combo_minus {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <8 9>;
@@ -147,16 +218,22 @@
             bindings = <&kp END>;
             layers = <MAC WIN>;
         };
-        combo_line_left {
+        combo_caps_word {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <0 10>;
-            bindings = <&line_left>;
+            bindings = <&caps_word>;
             layers = <MAC WIN>;
         };
-        combo_line_right {
+        combo_del {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <31 32>;
+            bindings = <&kp DEL>;  
+            layers = <MAC WIN>;
+        };
+        combo_quote {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <9 19>;
-            bindings = <&line_right>;
+            bindings = <&kp DQT>;
             layers = <MAC WIN>;
         };
         combo_lbrc {
@@ -195,17 +272,17 @@
             bindings = <&kp RPAR>;
             layers = <MAC WIN>;
         };
-        combo_lte {
+        combo_dt_right {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <23 24>;
-            bindings = <&lte>;
-            layers = <MAC WIN>;
+            bindings = <&desktop_right>;
+            layers = <MAC>;
         };
-        combo_gte {
+        combo_dt_left {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <25 26>;
-            bindings = <&gte_ptr>;
-            layers = <MAC WIN>;
+            bindings = <&desktop_left>;
+            layers = <MAC>;
         };
         combo_left {
             timeout-ms = <COMBO_TIMEOUT>;
@@ -213,21 +290,45 @@
             bindings = <&kp LEFT>;
             layers = <MAC WIN>;
         };
-        combo_up {
+        combo_rptr {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <16 26>;
+            bindings = <&rptr>;
+            layers = <MAC WIN>;
+        };
+        combo_lt {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <17 27>;
+            bindings = <&kp LT>;
+            layers = <MAC WIN>;
+        };
+        combo_gt {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <18 28>;
+            bindings = <&kp GT>;
+            layers = <MAC WIN>;
+        };
+        combo_left {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <11 21>;
+            bindings = <&kp LEFT>;
+            layers = <MAC WIN>;
+        };
+        combo_up {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <2 12>;
             bindings = <&kp UP>;
             layers = <MAC WIN>;
         };
         combo_down {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <17 27>;
+            key-positions = <12 22>;
             bindings = <&kp DOWN>;
             layers = <MAC WIN>;
         };
         combo_right {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <18 28>;
+            key-positions = <13 23>;
             bindings = <&kp RIGHT>;
             layers = <MAC WIN>;
         };
@@ -246,8 +347,8 @@
       label = "HOMEROW_MODS";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <250>;
-      quick-tap-ms = <150>;
+      tapping-term-ms = <175>;
+      quick-tap-ms = <125>;
       global-quick-tap;
       bindings = <&kp>, <&kp>;
     };
