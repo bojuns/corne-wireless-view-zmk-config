@@ -230,6 +230,12 @@
             bindings = <&kp DEL>;  
             layers = <MAC WIN>;
         };
+        combo_colon {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <33 34>;
+            bindings = <&kp COLON>;  
+            layers = <MAC WIN>;
+        };
         combo_quote {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <9 19>;
