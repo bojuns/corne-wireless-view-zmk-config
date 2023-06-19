@@ -180,7 +180,7 @@
         combo_equal {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <0 1>;
-            bindings = <&kp EQUAL>;
+            bindings = <&eq_neq>;
             layers = <MAC WIN>;
         };
         combo_plus_equal {
