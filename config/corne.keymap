@@ -61,6 +61,13 @@
             bindings = <&kp LT>, <&lte>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        eq_neq: equal_not_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EQ_NEQ";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&neq>;
+            mods =  <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
 / {
